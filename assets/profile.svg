@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Profile placeholder</title>
+  <desc id="desc">A simple placeholder profile image for the CV website.</desc>
+  <rect width="240" height="240" fill="#edf2f7"/>
+  <circle cx="120" cy="92" r="42" fill="#b8c4d0"/>
+  <path d="M48 216c9-48 39-76 72-76s63 28 72 76" fill="#b8c4d0"/>
+  <text x="120" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#596773">JS</text>
+</svg>

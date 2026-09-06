@@ -4,113 +4,165 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="임준수 CV">
-    <title>임준수 | CV</title>
+    <title>CV | 임준수</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="page">
-      <aside class="sidebar" aria-label="Profile">
-        <section class="profile">
-          <div class="avatar" aria-hidden="true">JS</div>
-          <h1>임준수</h1>
-          <p class="role">Software Engineer</p>
-          <p class="summary">
-            문제를 구조화하고, 사용자가 실제로 쓰기 좋은 제품을 만드는 개발자입니다.
-          </p>
-        </section>
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="navbar-brand" href="./">임준수</a>
+      <div class="nav-links">
+        <a href="#education">CV</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/jsulim" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="avatar-link" href="./" aria-label="Home">
+        <img src="assets/profile.svg" alt="임준수 프로필 사진">
+      </a>
+    </nav>
 
-        <section class="section">
-          <h2>Contact</h2>
-          <ul class="list">
-            <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
-            <li><a href="https://github.com/jsulim">github.com/jsulim</a></li>
-            <li>Seoul, Korea</li>
+    <header class="intro-header">
+      <div class="container">
+        <h1>CV</h1>
+      </div>
+    </header>
+
+    <main class="container cv-page">
+      <div class="cv-download-wrap">
+        <a class="cv-download-button" href="#" aria-disabled="true">
+          Download CV (PDF)
+        </a>
+      </div>
+
+      <section class="cv-section" id="profile">
+        <h2>Profile</h2>
+        <p class="cv-note">
+          컴퓨터공학 기반으로 웹 서비스, 백엔드, 데이터 처리, AI 응용 시스템을 개발합니다.
+          연구와 실무 사이에서 문제를 명확히 정의하고, 유지보수 가능한 코드와 실제 사용자에게 닿는 결과물을 만드는 데 관심이 있습니다.
+        </p>
+      </section>
+
+      <section class="cv-section" id="education">
+        <h2>Education</h2>
+        <article class="cv-entry">
+          <h3>학교명 <span>YYYY. MM - YYYY. MM</span></h3>
+          <h4>전공명 / 학위명</h4>
+          <ul>
+            <li>주요 전공, 연구 분야, 졸업 프로젝트 등을 작성하세요.</li>
+            <li>학점, 장학금, 수상 내역이 있으면 이곳에 추가하세요.</li>
           </ul>
-        </section>
+        </article>
+      </section>
 
-        <section class="section">
-          <h2>Skills</h2>
-          <div class="chips">
-            <span>JavaScript</span>
-            <span>TypeScript</span>
-            <span>React</span>
-            <span>Node.js</span>
-            <span>Git</span>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2>Languages</h2>
-          <ul class="list">
-            <li>Korean Native</li>
-            <li>English Professional</li>
+      <section class="cv-section" id="experience">
+        <h2>Professional Experience</h2>
+        <article class="cv-entry">
+          <h3>회사명 또는 기관명 <span>YYYY. MM - Present</span></h3>
+          <h4>직무명</h4>
+          <ul>
+            <li>담당한 역할과 개발한 기능을 구체적으로 작성하세요.</li>
+            <li>사용한 기술 스택과 성과를 숫자로 표현하면 좋습니다.</li>
+            <li>협업, 배포, 운영, 성능 개선 경험을 추가하세요.</li>
           </ul>
-        </section>
-      </aside>
+        </article>
 
-      <section class="content" aria-label="CV details">
-        <section class="hero">
-          <p class="eyebrow">Curriculum Vitae</p>
-          <h2>제품의 목적과 코드의 유지보수성을 함께 보는 개발자</h2>
-          <p>
-            여기에 본인의 핵심 강점, 관심 분야, 대표 경험을 2~3문장으로 정리하세요.
-            채용 담당자가 첫 화면에서 바로 이해할 수 있게 구체적인 기술과 성과를 넣는 것이 좋습니다.
-          </p>
-        </section>
+        <article class="cv-entry">
+          <h3>이전 회사명 또는 프로젝트명 <span>YYYY. MM - YYYY. MM</span></h3>
+          <h4>직무명</h4>
+          <ul>
+            <li>핵심 업무와 기여도를 한 줄씩 정리하세요.</li>
+            <li>문제 상황, 해결 방법, 결과가 드러나게 쓰면 좋습니다.</li>
+          </ul>
+        </article>
+      </section>
 
-        <section class="section">
-          <h2>Experience</h2>
-          <article class="item">
-            <div class="item-heading">
-              <h3>회사명 / 프로젝트명</h3>
-              <span>2024 - Present</span>
-            </div>
-            <p class="muted">Frontend Engineer</p>
-            <ul>
-              <li>사용자 흐름을 개선해 주요 작업 완료 시간을 줄였습니다.</li>
-              <li>React 기반 화면과 API 연동 구조를 설계하고 구현했습니다.</li>
-              <li>테스트와 코드 리뷰 기준을 정리해 배포 안정성을 높였습니다.</li>
-            </ul>
-          </article>
+      <section class="cv-section" id="research">
+        <h2>Research Experience</h2>
+        <article class="cv-entry">
+          <h3>연구실 또는 연구 프로젝트명 <span>YYYY. MM - Present</span></h3>
+          <h4>Research Assistant / Researcher</h4>
+          <ul>
+            <li>연구 주제와 본인이 맡은 역할을 작성하세요.</li>
+            <li>논문, 데이터셋, 실험, 모델링, 구현 기여를 정리하세요.</li>
+          </ul>
+        </article>
+      </section>
 
-          <article class="item">
-            <div class="item-heading">
-              <h3>이전 회사명 / 프로젝트명</h3>
-              <span>2022 - 2024</span>
-            </div>
-            <p class="muted">Developer</p>
-            <ul>
-              <li>서비스 운영에 필요한 내부 도구를 개발했습니다.</li>
-              <li>반복 업무를 자동화해 운영 효율을 개선했습니다.</li>
-            </ul>
-          </article>
-        </section>
+      <section class="cv-section" id="projects">
+        <h2>Key Projects</h2>
+        <article class="cv-entry">
+          <h3><a href="https://github.com/jsulim/CV" target="_blank" rel="noopener noreferrer">CV Website</a> <span>GitHub Pages</span></h3>
+          <h4>HTML, CSS, GitHub Pages</h4>
+          <ul>
+            <li>개인 CV를 공개하기 위한 정적 웹사이트입니다.</li>
+            <li>프로필 이미지와 PDF 파일은 assets 폴더에서 교체할 수 있습니다.</li>
+          </ul>
+        </article>
 
-        <section class="section">
-          <h2>Projects</h2>
-          <article class="item">
-            <div class="item-heading">
-              <h3>CV Website</h3>
-              <span>GitHub Pages</span>
-            </div>
-            <p>
-              개인 이력과 프로젝트를 정리하기 위한 정적 웹사이트입니다.
-              HTML/CSS만 사용해 빠르게 로딩되고 쉽게 수정할 수 있습니다.
-            </p>
-          </article>
-        </section>
+        <article class="cv-entry">
+          <h3>프로젝트명 <span>YYYY</span></h3>
+          <h4>사용 기술 스택</h4>
+          <ul>
+            <li>프로젝트 목적과 구현 내용을 작성하세요.</li>
+            <li>GitHub, 데모, 논문 링크가 있으면 제목에 연결하세요.</li>
+          </ul>
+        </article>
+      </section>
 
-        <section class="section">
-          <h2>Education</h2>
-          <article class="item">
-            <div class="item-heading">
-              <h3>학교명</h3>
-              <span>YYYY - YYYY</span>
-            </div>
-            <p>전공명 또는 교육 과정명을 입력하세요.</p>
-          </article>
-        </section>
+      <section class="cv-section" id="publications">
+        <h2>Publications</h2>
+        <article class="cv-entry">
+          <h3>논문 제목 또는 발표 제목 <span>YYYY</span></h3>
+          <h4>학회명 / 저널명 / 상태</h4>
+          <ul>
+            <li>저자 목록, 발표 방식, 링크 등을 작성하세요.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cv-section" id="skills">
+        <h2>Technical Skills</h2>
+        <p class="cv-skill"><strong>Programming Languages</strong>: JavaScript, TypeScript, Python, Java, SQL</p>
+        <p class="cv-skill"><strong>Frontend</strong>: React, HTML5, CSS3, Responsive Web Design</p>
+        <p class="cv-skill"><strong>Backend & Infrastructure</strong>: Node.js, Spring Boot, REST API, Docker, Linux</p>
+        <p class="cv-skill"><strong>Tools</strong>: Git, GitHub, VS Code, Figma</p>
+      </section>
+
+      <section class="cv-section" id="certifications">
+        <h2>Certifications & Licenses</h2>
+        <article class="credential-item">
+          <strong>자격증명</strong>
+          <span>등급 또는 분야</span>
+          <small>발급 기관 · YYYY. MM</small>
+        </article>
+      </section>
+
+      <section class="cv-section" id="contact">
+        <h2>Contact Information</h2>
+        <div class="cv-contact-grid">
+          <a class="cv-contact-link" href="mailto:your.email@example.com">Email</a>
+          <a class="cv-contact-link" href="https://github.com/jsulim" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="cv-contact-link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="cv-contact-link" href="#" target="_blank" rel="noopener noreferrer">Blog</a>
+        </div>
       </section>
     </main>
+
+    <footer>
+      <div class="container">
+        <ul class="footer-links" aria-label="Social links">
+          <li><a href="mailto:your.email@example.com">Email</a></li>
+          <li><a href="https://github.com/jsulim" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+        </ul>
+        <p class="copyright">임준수 &bull; 2026</p>
+        <p class="theme-by">CV layout inspired by academic GitHub Pages portfolios.</p>
+      </div>
+    </footer>
   </body>
 </html>
