@@ -106,16 +106,28 @@ img {
 }
 
 .intro-header {
-  margin: 130px 0 22px;
+  position: relative;
+  display: grid;
+  min-height: 330px;
+  align-items: center;
+  margin: 52px 0 34px;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.42)),
+    url("KakaoTalk_20260908_071837663.jpg") center 42% / cover no-repeat;
   text-align: center;
 }
 
 .intro-header h1 {
+  position: relative;
+  z-index: 1;
   margin: 0;
+  color: #fff;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 80px;
   font-weight: 800;
   line-height: 1.2;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .cv-page {
@@ -144,11 +156,6 @@ img {
   background: var(--button-hover);
   color: #fff;
   text-decoration: none;
-}
-
-.cv-download-button[aria-disabled="true"] {
-  cursor: not-allowed;
-  opacity: 0.7;
 }
 
 .cv-section {
@@ -335,7 +342,9 @@ footer a {
   }
 
   .intro-header {
-    margin-top: 42px;
+    min-height: 240px;
+    margin-top: 0;
+    background-position: center 36%;
   }
 
   .intro-header h1 {
@@ -359,5 +368,51 @@ footer a {
   .credential-item {
     grid-template-columns: 1fr;
     gap: 3px;
+  }
+}
+
+@media print {
+  .navbar,
+  .cv-download-wrap,
+  footer {
+    display: none;
+  }
+
+  .intro-header {
+    min-height: auto;
+    margin: 0 0 22px;
+    background: none;
+  }
+
+  .intro-header h1 {
+    color: var(--text);
+    font-size: 42px;
+    text-shadow: none;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .cv-section {
+    break-inside: avoid;
+    margin-bottom: 18px;
+  }
+
+  .cv-section > h2 {
+    font-size: 22px;
+  }
+
+  .cv-entry h3 {
+    font-size: 16px;
+  }
+
+  .cv-entry h4,
+  .publication-card h3 {
+    font-size: 13px;
   }
 }
