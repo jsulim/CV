@@ -108,13 +108,15 @@ img {
 .intro-header {
   position: relative;
   display: grid;
-  min-height: 330px;
+  min-height: 300px;
   align-items: center;
   margin: 52px 0 34px;
   overflow: hidden;
+  background-color: #202326;
   background:
     linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.42)),
-    url("KakaoTalk_20260908_071837663.jpg") center 42% / cover no-repeat;
+    url("KakaoTalk_20260908_071837663.jpg") center 44% / auto 100% no-repeat,
+    #202326;
   text-align: center;
 }
 
@@ -342,9 +344,12 @@ footer a {
   }
 
   .intro-header {
-    min-height: 240px;
+    min-height: 230px;
     margin-top: 0;
-    background-position: center 36%;
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.42)),
+      url("KakaoTalk_20260908_071837663.jpg") center 42% / auto 100% no-repeat,
+      #202326;
   }
 
   .intro-header h1 {
