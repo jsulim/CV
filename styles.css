@@ -113,8 +113,8 @@ img {
   margin: 52px 0 34px;
   overflow: hidden;
   background-color: #202326;
-  background: url("KakaoTalk_20260908_071837663.jpg") center 44% / auto 100% no-repeat #202326;
-  text-align: center;
+  background: url("KakaoTalk_20260908_071837663.jpg") right 8% center / auto 220px no-repeat #202326;
+  text-align: left;
 }
 
 .intro-header h1 {
@@ -127,6 +127,10 @@ img {
   font-weight: 800;
   line-height: 1.2;
   text-shadow: 1px 1px 3px #000;
+}
+
+.intro-header .container {
+  width: min(100% - 32px, 760px);
 }
 
 .cv-page {
@@ -343,11 +347,16 @@ footer a {
   .intro-header {
     min-height: 230px;
     margin-top: 0;
-    background: url("KakaoTalk_20260908_071837663.jpg") center 42% / auto 100% no-repeat #202326;
+    background: url("KakaoTalk_20260908_071837663.jpg") right 18px center / auto 150px no-repeat #202326;
   }
 
   .intro-header h1 {
     font-size: 52px;
+  }
+
+  .intro-header .container {
+    width: min(100% - 190px, 760px);
+    margin-left: 16px;
   }
 
   .cv-section > h2 {
