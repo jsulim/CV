@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body data-lang="en">
     <nav class="navbar" aria-label="Main navigation">
       <a class="navbar-brand" href="./">Junsu Lim</a>
       <div class="nav-links">
@@ -30,6 +30,11 @@
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+      </div>
+      <div class="language-toggle" aria-label="Language toggle">
+        <span id="en-label" class="active">EN</span>
+        <button id="language-switch" class="toggle-switch" type="button" aria-label="Toggle Korean version" aria-pressed="false"></button>
+        <span id="ko-label">K</span>
       </div>
       <a class="avatar-link" href="./" aria-label="Home">
         <img src="profile.jpg" alt="Junsu Lim profile photo">
@@ -44,16 +49,24 @@
 
     <main class="container cv-page">
       <div class="cv-download-wrap">
-        <a class="cv-download-button" href="cv.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a>
+        <a id="cv-download" class="cv-download-button" href="cv.pdf" data-en-href="cv.pdf" data-ko-href="cv-ko.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="lang-en">Download CV (PDF)</span>
+          <span class="lang-ko">CV 다운로드 (PDF)</span>
+        </a>
       </div>
 
       <section class="cv-section" id="profile">
         <h2>Profile</h2>
-        <p class="cv-note">
+        <p class="cv-note lang-en">
           AI engineer and medical imaging researcher with publications in medical image synthesis,
           self-supervised medical representation learning, and anatomy-aware vision-language models.
           My interests center on medical image analysis, diffusion-based generation, vision-language reasoning,
           and reliable data/model pipelines for applied AI research.
+        </p>
+        <p class="cv-note lang-ko">
+          의료영상 합성, 자기지도 의료영상 표현학습, 해부학 인지 Vision-Language Model 연구 실적을 보유한 AI 엔지니어이자 의료영상 AI 연구자입니다.
+          주요 관심 분야는 Medical Image Analysis, diffusion-based generation, vision-language reasoning,
+          그리고 응용 AI 연구를 안정적으로 수행하기 위한 데이터 및 모델 파이프라인 구축입니다.
         </p>
       </section>
 
@@ -62,10 +75,15 @@
         <article class="cv-entry">
           <h3>Sangmyung University <span>Mar. 2023 - Aug. 2026</span></h3>
           <h4>Bachelor's Program in Computer Science / Software (GPA: 3.73/4.5)</h4>
-          <ul>
+          <ul class="lang-en">
             <li>Built a foundation in machine learning, deep learning, data preprocessing, algorithms, and software engineering.</li>
             <li>Applied data-driven modeling methods through preprocessing, feature engineering, validation, and model evaluation workflows.</li>
             <li>Developed programming and system design skills for building reliable AI and data-intensive applications.</li>
+          </ul>
+          <ul class="lang-ko">
+            <li>Machine Learning, Deep Learning, Data Preprocessing, Algorithm, Software Engineering의 기초를 체계적으로 학습했습니다.</li>
+            <li>전처리, feature engineering, validation, model evaluation workflow를 통해 데이터 기반 모델링 방법론을 실제 문제에 적용했습니다.</li>
+            <li>AI 및 데이터 집약적 애플리케이션을 구현하기 위한 프로그래밍 역량과 시스템 설계 역량을 개발했습니다.</li>
           </ul>
         </article>
       </section>
@@ -77,25 +95,21 @@
           <p class="publication-authors">K. Kim, J. Bae, Y. Han, J. Y. Bae, S. Ju, <strong>J. Lim</strong>, G. Kim, N. J. Kim, W. K. Jeong, et al.</p>
           <p class="publication-meta">IEEE International Symposium on Biomedical Imaging (ISBI), 1-5 | 2026</p>
         </article>
-
         <article class="publication-card">
           <h3>MATHENA: Mamba-based Architectural Tooth Hierarchical Estimator and Holistic Evaluation Network for Anatomy</h3>
           <p class="publication-authors">K. Kim, J. Park, Y. Han, A. Jung, S. Park, S. Lee, J. Yang, J. Han, S. Lee, <strong>J. Lim</strong>, et al.</p>
           <p class="publication-meta">arXiv preprint arXiv:2604.00537 | 2026</p>
         </article>
-
         <article class="publication-card">
           <h3>MAESIL: Masked Autoencoder for Enhanced Self-supervised Medical Image Learning</h3>
           <p class="publication-authors">K. Kim, H. Jung, Y. Han, <strong>J. Lim</strong>, Y. Jean, S. Park, E. Choi, H. Go, S. Ju, S. Park, et al.</p>
           <p class="publication-meta">International Conference on Electronics, Information, and Communication | 2026</p>
         </article>
-
         <article class="publication-card">
           <h3>NEMESIS: Noise-suppressed Efficient MAE with Enhanced Superpatch Integration Strategy</h3>
           <p class="publication-authors">K. Kim, H. Jung, Y. Han, H. Go, E. Choi, S. Park, <strong>J. Lim</strong>, J. Yang, S. Lee, et al.</p>
           <p class="publication-meta">arXiv preprint arXiv:2604.01612 | 2026</p>
         </article>
-
         <article class="publication-card">
           <h3>MINTI: Fine Boundary Instructional Learning for Intelligent Anatomical Vision-Language Models</h3>
           <p class="publication-authors">H. Lee, Y. Han, K. Kim, <strong>J. Lim</strong>, I. Um, H. Go, E. Choi, K. Kim, S. Park, J. Jeong, et al.</p>
@@ -108,12 +122,19 @@
         <article class="cv-entry">
           <h3>Medical Imaging Lab, Seoul National University <span>Sep. 2025 - Present</span></h3>
           <h4>Research Assistant</h4>
-          <ul>
+          <ul class="lang-en">
             <li>Advisor: Prof. Nam-Joon Kim (SNU) and Prof. Wonjae Lee, Radiologist (Samsung Medical Center).</li>
             <li>Participate as a member of the SUDAL Medical Imaging Team, contributing to journal clubs, paper reviews, and collaborative research discussions.</li>
             <li>Built the official IMSI Lab website from the ground up to organize lab research, members, and publication records.</li>
             <li>Conduct research on conditional abdominal MRI synthesis using segmentation-guided ControlNet pipelines.</li>
             <li>Collaborate with Samsung Medical Center radiologists and NVIDIA researchers on clinically motivated medical AI projects.</li>
+          </ul>
+          <ul class="lang-ko">
+            <li>Advisor: Prof. Nam-Joon Kim (SNU), Prof. Wonjae Lee, Radiologist (Samsung Medical Center).</li>
+            <li>SUDAL Medical Imaging Team의 팀원으로 참여하며 journal club, paper review, 공동 연구 논의에 기여하고 있습니다.</li>
+            <li>IMSI Lab 공식 웹사이트를 구축하여 연구 주제, 구성원, publication record를 체계적으로 정리했습니다.</li>
+            <li>Segmentation-guided ControlNet pipeline을 활용한 conditional abdominal MRI synthesis 연구를 수행하고 있습니다.</li>
+            <li>Samsung Medical Center 영상의학과 및 NVIDIA 연구진과 임상 기반 medical AI project를 협업하고 있습니다.</li>
           </ul>
         </article>
       </section>
@@ -123,43 +144,61 @@
         <article class="cv-entry">
           <h3>SUDAL Medical Imaging Team <span>NVIDIA Collaboration</span></h3>
           <h4>Medical Imaging AI Research</h4>
-          <ul>
+          <ul class="lang-en">
             <li>Collaborate with Prof. Nam-Joon Kim and medical AI researchers on clinically oriented medical imaging projects.</li>
             <li>Work with NVIDIA researcher Ping Shu Ho (Cliff) on diffusion-based medical imaging research topics.</li>
             <li>Focus on medical image synthesis, reconstruction, segmentation-aware generation, and robust visual representation learning.</li>
+          </ul>
+          <ul class="lang-ko">
+            <li>Prof. Nam-Joon Kim 및 medical AI 연구진과 임상 지향 medical imaging project를 협업하고 있습니다.</li>
+            <li>NVIDIA researcher Ping Shu Ho (Cliff)와 diffusion-based medical imaging research topic을 함께 논의하고 있습니다.</li>
+            <li>Medical image synthesis, reconstruction, segmentation-aware generation, robust visual representation learning에 집중하고 있습니다.</li>
           </ul>
         </article>
       </section>
 
       <section class="cv-section" id="projects">
-        <h2>Key Research Projects</h2>
+        <h2><span class="lang-en">Key Research Projects</span><span class="lang-ko">Key Research Projects</span></h2>
         <article class="cv-entry">
           <h3>3D Latent Diffusion for MR Imaging <span>2026</span></h3>
           <h4>Label-guided synthetic MRI and hepatic structure segmentation</h4>
-          <ul>
+          <ul class="lang-en">
             <li>Contributed to the experimental workflow for label-guided 3D latent diffusion models for high-resolution synthetic MR imaging.</li>
             <li>Supported segmentation-aware generation experiments aimed at improving hepatic structure segmentation under limited medical imaging data.</li>
             <li>Reviewed model outputs and failure cases to connect synthesis quality with downstream segmentation utility.</li>
           </ul>
+          <ul class="lang-ko">
+            <li>고해상도 synthetic MR imaging을 위한 label-guided 3D latent diffusion model 실험 workflow에 기여했습니다.</li>
+            <li>제한된 medical imaging data 환경에서 hepatic structure segmentation 성능 향상을 목표로 segmentation-aware generation 실험을 지원했습니다.</li>
+            <li>생성 결과와 failure case를 검토하여 synthesis quality와 downstream segmentation utility의 관계를 분석했습니다.</li>
+          </ul>
         </article>
-
         <article class="cv-entry">
           <h3>Medical Foundation Models with MAE and Mamba <span>2026</span></h3>
           <h4>Self-supervised representation learning and anatomical structure estimation</h4>
-          <ul>
+          <ul class="lang-en">
             <li>Worked on MAE-based medical image representation learning pipelines for robust downstream evaluation.</li>
             <li>Explored Mamba-based modeling approaches for hierarchical anatomical estimation and efficient visual sequence modeling.</li>
             <li>Participated in literature review, experiment organization, and result analysis for medical foundation model research.</li>
           </ul>
+          <ul class="lang-ko">
+            <li>Robust downstream evaluation을 위한 MAE-based medical image representation learning pipeline 연구에 참여했습니다.</li>
+            <li>Hierarchical anatomical estimation과 efficient visual sequence modeling을 위한 Mamba-based modeling approach를 검토했습니다.</li>
+            <li>Medical foundation model 연구를 위한 literature review, experiment organization, result analysis에 기여했습니다.</li>
+          </ul>
         </article>
-
         <article class="cv-entry">
           <h3>Medical Vision-Language Model Development <span>2026</span></h3>
           <h4>Instruction tuning for anatomy-aware VLMs</h4>
-          <ul>
+          <ul class="lang-en">
             <li>Developed research workflows for fine-grained boundary instruction learning in anatomical vision-language models.</li>
             <li>Connected medical imaging tasks with multimodal reasoning, report-aligned supervision, and clinical visual understanding.</li>
             <li>Contributed to dataset/task formulation for evaluating anatomy-aware vision-language reasoning.</li>
+          </ul>
+          <ul class="lang-ko">
+            <li>Anatomical vision-language model의 fine-grained boundary instruction learning을 위한 연구 workflow를 구성했습니다.</li>
+            <li>Medical imaging task를 multimodal reasoning, report-aligned supervision, clinical visual understanding과 연결했습니다.</li>
+            <li>Anatomy-aware vision-language reasoning 평가를 위한 dataset/task formulation에 기여했습니다.</li>
           </ul>
         </article>
       </section>
@@ -169,33 +208,49 @@
         <article class="cv-entry">
           <h3>INTWEEN <span>Jun. 2026 - Present</span></h3>
           <h4>AI SaaS / Data Systems Engineer</h4>
-          <ul>
+          <ul class="lang-en">
             <li>Develop in-house AI-based SaaS products, including Sasure, by integrating internal datasets and service workflows.</li>
             <li>Design pipelines for collecting, cleaning, normalizing, and integrating fragmented operational data into analysis-ready formats.</li>
             <li>Build workflow automation systems that connect data preprocessing, retrieval, and AI-assisted decision support.</li>
             <li>Translate heterogeneous operational data into structured resources for enterprise AI transformation and internal model-driven services.</li>
           </ul>
+          <ul class="lang-ko">
+            <li>Sasure를 포함한 사내 AI-based SaaS product를 개발하며 내부 dataset과 service workflow를 통합하고 있습니다.</li>
+            <li>분산된 operational data를 수집, 정제, 정규화, 통합하여 analysis-ready format으로 변환하는 pipeline을 설계하고 있습니다.</li>
+            <li>Data preprocessing, retrieval, AI-assisted decision support를 연결하는 workflow automation system을 구축하고 있습니다.</li>
+            <li>이질적인 사내 운영 데이터를 구조화하여 enterprise AI transformation과 internal model-driven service의 기반을 마련하고 있습니다.</li>
+          </ul>
         </article>
-
         <article class="cv-entry">
           <h3>GDSK <span>Jan. 2025 - Aug. 2025</span></h3>
           <h4>Data / AI Engineer</h4>
-          <ul>
+          <ul class="lang-en">
             <li>Designed ETL processes that parse unstructured address text and convert it into standardized address formats.</li>
             <li>Built database architecture and preprocessing workflows for high-volume geographic and address-based datasets.</li>
             <li>Integrated public and geospatial datasets to construct feature sets for regional income estimation models.</li>
             <li>Developed data collection and preprocessing pipelines for large-scale geospatial information analysis.</li>
           </ul>
+          <ul class="lang-ko">
+            <li>비정형 주소 텍스트를 parsing하여 표준 주소 format으로 변환하는 ETL process를 설계했습니다.</li>
+            <li>대용량 geographic/address-based dataset 처리를 위한 database architecture와 preprocessing workflow를 구축했습니다.</li>
+            <li>공공 데이터와 geospatial data를 통합하여 regional income estimation model을 위한 feature set을 구성했습니다.</li>
+            <li>Large-scale geospatial information analysis를 위한 data collection 및 preprocessing pipeline을 개발했습니다.</li>
+          </ul>
         </article>
-
         <article class="cv-entry">
           <h3>OUTTA <span>Jul. 2024 - Present</span></h3>
           <h4>Medical Imaging Team Lead</h4>
-          <ul>
+          <ul class="lang-en">
             <li>Contribute to an AI organization connected to Seoul National University research and education communities.</li>
             <li>Design bootcamp curriculum and hands-on learning materials for Python, deep learning, and medical AI topics.</li>
             <li>Lead structured paper study sessions on medical image analysis, diffusion models, MAE-based representation learning, and VLMs.</li>
             <li>Coordinate research discussions and project execution across junior members to strengthen reproducible AI research practice.</li>
+          </ul>
+          <ul class="lang-ko">
+            <li>Seoul National University 연구 및 교육 커뮤니티와 연결된 AI organization에서 활동하고 있습니다.</li>
+            <li>Python, Deep Learning, Medical AI 주제의 bootcamp curriculum과 hands-on learning material을 제작했습니다.</li>
+            <li>Medical image analysis, diffusion models, MAE-based representation learning, VLM 관련 논문 스터디를 운영했습니다.</li>
+            <li>재현 가능한 AI research practice를 강화하기 위해 연구 토론과 프로젝트 진행을 조율했습니다.</li>
           </ul>
         </article>
       </section>
@@ -207,31 +262,11 @@
           <span>935</span>
           <small>Oct. 2022</small>
         </article>
-        <article class="credential-item">
-          <strong>Big Data Analysis Engineer</strong>
-          <span>Certification</span>
-          <small>Acquired</small>
-        </article>
-        <article class="credential-item">
-          <strong>SQLD</strong>
-          <span>SQL Developer</span>
-          <small>Acquired</small>
-        </article>
-        <article class="credential-item">
-          <strong>AWS SAA</strong>
-          <span>Solutions Architect Associate</span>
-          <small>Acquired</small>
-        </article>
-        <article class="credential-item">
-          <strong>NCA</strong>
-          <span>Naver Cloud Platform</span>
-          <small>Acquired</small>
-        </article>
-        <article class="credential-item">
-          <strong>Information Processing Engineer</strong>
-          <span>National Technical Qualification</span>
-          <small>Acquired</small>
-        </article>
+        <article class="credential-item"><strong>Big Data Analysis Engineer</strong><span>Certification</span><small>Acquired</small></article>
+        <article class="credential-item"><strong>SQLD</strong><span>SQL Developer</span><small>Acquired</small></article>
+        <article class="credential-item"><strong>AWS SAA</strong><span>Solutions Architect Associate</span><small>Acquired</small></article>
+        <article class="credential-item"><strong>NCA</strong><span>Naver Cloud Platform</span><small>Acquired</small></article>
+        <article class="credential-item"><strong>Information Processing Engineer</strong><span>National Technical Qualification</span><small>Acquired</small></article>
       </section>
 
       <section class="cv-section" id="skills">
@@ -272,5 +307,32 @@
         <p class="theme-by">Academic CV hosted on GitHub Pages.</p>
       </div>
     </footer>
+
+    <script>
+      const switchButton = document.getElementById("language-switch");
+      const enLabel = document.getElementById("en-label");
+      const koLabel = document.getElementById("ko-label");
+      const downloadLink = document.getElementById("cv-download");
+
+      function setLanguage(language) {
+        const isKorean = language === "ko";
+        document.body.dataset.lang = isKorean ? "ko" : "en";
+        document.documentElement.lang = isKorean ? "ko" : "en";
+        switchButton.classList.toggle("active", isKorean);
+        switchButton.setAttribute("aria-pressed", String(isKorean));
+        enLabel.classList.toggle("active", !isKorean);
+        koLabel.classList.toggle("active", isKorean);
+        downloadLink.href = isKorean ? downloadLink.dataset.koHref : downloadLink.dataset.enHref;
+        localStorage.setItem("cv-language", isKorean ? "ko" : "en");
+      }
+
+      switchButton.addEventListener("click", () => {
+        setLanguage(document.body.dataset.lang === "ko" ? "en" : "ko");
+      });
+
+      const params = new URLSearchParams(window.location.search);
+      const initialLanguage = params.get("lang") || localStorage.getItem("cv-language") || "en";
+      setLanguage(initialLanguage === "ko" ? "ko" : "en");
+    </script>
   </body>
 </html>
