@@ -113,7 +113,7 @@ img {
   margin: 52px 0 34px;
   overflow: hidden;
   background-color: #202326;
-  background: url("KakaoTalk_20260908_071837663.jpg") right 7% center / auto 112% no-repeat #202326;
+  background: url("KakaoTalk_20260908_071837663.jpg") right 7% center / auto 120% no-repeat #202326;
   text-align: left;
 }
 
@@ -347,7 +347,7 @@ footer a {
   .intro-header {
     min-height: 230px;
     margin-top: 0;
-    background: url("KakaoTalk_20260908_071837663.jpg") right center / auto 108% no-repeat #202326;
+    background: url("KakaoTalk_20260908_071837663.jpg") right center / auto 114% no-repeat #202326;
   }
 
   .intro-header h1 {
